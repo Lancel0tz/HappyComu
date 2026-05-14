@@ -23,12 +23,10 @@ def respond():
                 response_format="text"
             )
 
-        # 将新的转录添加到对话历史
         global conversation_history
         conversation_history.append(transcript)
         os.remove(audio)
 
-        # 将整个对话历史发送给 GPT-3
         full_prompt = "\n".join(conversation_history)
         print(full_prompt)
         response = client.completions.create(
