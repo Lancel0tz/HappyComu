@@ -12,7 +12,7 @@ def respond():
     audio = r'.\audioflow\output.mp3'
 
     # Initialize OpenAI client
-    client = openai.OpenAI(api_key='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')
+    client = openai.OpenAI(api_key='')
 
     # Transcribe audio to text
     if os.path.exists(audio):
