@@ -14,7 +14,7 @@ def start_recording():
     global is_recording, recording, stream
     recording = []
     is_recording = True
-    print("正在录音......")
+    print("Recording......")
     stream = sd.InputStream(callback=record_callback, samplerate=48000, channels=2)
     stream.start()
 
@@ -24,9 +24,8 @@ def stop_recording():
     if stream:
         stream.stop()
         stream.close()
-        print("录音结束......")
-    write(r'.\audioflow\output.mp3', 48000, np.array(recording))  # 保存为MP3文件
-
+        print("Recording End......")
+    write(r'.\audioflow\output.mp3', 48000, np.array(recording)) 
 if __name__ == '__main__':
     start_recording()
     time.sleep(5)
