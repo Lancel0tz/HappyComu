@@ -317,4 +317,3 @@ HappyComu can be used as a prototype for:
 * Multimodal AI application prototypes
 * Talking-head avatar research demonstrations
 
-```
